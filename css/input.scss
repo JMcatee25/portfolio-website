@@ -1,0 +1,460 @@
+shtml,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ========================== Site Styles =================== */
+// Index page ==============================================================================================
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(#1d3641, #dcdcdc, #1d3641);
+}
+.title {
+  text-decoration: underline;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  top: 8%;
+  left: 46%;
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: bolder;
+  font-style: normal;
+}
+.index {
+  background-image: url(../imgs/space3.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+.indexMain {
+  display: flex;
+  position: relative;
+  height: 718px;
+  width: 35%;
+  left: 65%;
+  background: #284c5a;
+  flex-direction: column;
+  p {
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 2em;
+    color: white;
+    margin: 5px;
+    flex-basis: 200px;
+  }
+  .quote {
+    font-style: italic;
+  }
+  .name {
+    text-decoration: underline;
+    text-align: center;
+  }
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+}
+.material-icons {
+  display: none;
+}
+// About page ==============================================================================================
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+.abMain {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 1.3em;
+    flex-basis: 50px;
+    margin-top: 40px;
+  }
+  .personalInfo {
+    position: relative;
+    width: 50%;
+    margin-top: 15px;
+  }
+  .avatar {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 5px white solid;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+// Gallery page ==============================================================================================
+.container {
+  position: relative;
+  margin: 50px;
+}
+.gallery {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  justify-content: center;
+}
+.galleryimg {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transition: 0.5s ease;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+  &:hover {
+    opacity: 1;
+  }
+}
+.caption {
+  color: black;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+// Codepen page ==================================================================================================
+.codemain {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  justify-content: center;
+  margin-top: 10px;
+}
+.code {
+  height: 250px;
+  width: 450px;
+}
+.github {
+  top: 72vh;
+}
+
+// Contact page ==================================================================================================
+.input {
+  width: 60%;
+  margin: 5% auto;
+  #firstName,
+  #lastName,
+  #email,
+  #company,
+  #comments {
+    width: 100%;
+    padding: 5px;
+    border-radius: 0.5rem;
+    border: black solid 1px;
+  }
+  input:invalid {
+    border: 2px dashed red;
+  }
+
+  div {
+    margin: 10px;
+  }
+  #contactbutton {
+    padding: 10px;
+    margin: 5px 0;
+    -webkit-appearance: none;
+    display: inline-block;
+  }
+}
+// Resume page ==================================================================================================
+.resMain {
+  width: 60%;
+  margin: 25px auto;
+  line-height: 1.3em;
+  border: black solid 2px;
+  padding: 7px;
+  text-align: center;
+  header {
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.6em;
+      margin-bottom: 5px;
+    }
+  }
+  p {
+    font-size: 0.7em;
+    line-height: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  h3 {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  aside {
+    font-size: 0.6em;
+  }
+  section {
+    margin-bottom: 10px;
+  }
+}
+// Multiple pages ================================================================================================
+
+.nav {
+  display: flex;
+  transition: 0.5s;
+  height: 50px;
+  background: linear-gradient(black, #284c5a);
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  li {
+    font-family: "Oswald", sans-serif;
+    margin: 0.6rem 1.2rem;
+    display: inline;
+    font-size: 1.3rem;
+  }
+  a {
+    font-size: 1.2em;
+    justify-content: center;
+  }
+  a:visited {
+    color: white;
+  }
+}
+
+.bottom {
+  margin: auto auto 0 auto;
+  display: flex;
+  background-color: #284c5a;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  a {
+    justify-content: center;
+  }
+  .small {
+    height: 35px;
+    width: 35px;
+  }
+}
+.about--title,
+.gallery--title,
+.contact--title {
+  margin-top: 10px;
+}
+
+// Media queries ================================================================================================
+
+@media all and (max-width: 640px) {
+  .nav a {
+    display: none;
+  }
+  .material-icons {
+    font-size: 40px;
+    left: 80%;
+    position: absolute;
+    display: inline;
+    color: white;
+  }
+
+  .navOpen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    z-index: 2;
+
+    ul {
+      flex-direction: column;
+    }
+
+    i {
+      display: inline-block;
+      position: absolute;
+      left: 80%;
+    }
+    a {
+      display: block;
+      padding: 5px;
+      margin: 5px;
+      flex-direction: column;
+    }
+  }
+  .indexMain {
+    left: 0;
+    width: 100%;
+    flex-basis: 0;
+    .name {
+      height: 100px;
+    }
+    p {
+      margin: 25px;
+    }
+  }
+  .abMain p {
+    flex-basis: 200px;
+    font-size: 1em;
+  }
+}

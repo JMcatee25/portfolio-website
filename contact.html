@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="code.html">Codepen/Github</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <i class="material-icons" onclick="toggleNavigation()">reorder</i>
+    <h1 class="title contact--title">Contact Me</h1>
+    <main>
+        <div class="input">
+            <form action="#" method="get" name="myForm">
+                <div id="contactfirst">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div id="contactlast">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div id="contactemail">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div id="contactcompany">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <label for="comments">Comments/Questions</label>
+                <textarea id="comments" name="comments" placeholder="Comments" rows="10" cols="30"></textarea>
+                <input type="submit" id="contactbutton">
+            </form>
+        </div>
+    </main>
+    <footer class="bottom">
+        <a href="https://www.linkedin.com/in/jarrod-mcatee-910166168/">
+            <img class="small" src="imgs/linkedin.png" alt="Linkedin">
+        </a>
+        <a href="https://www.roadtohire.org/">
+            <img class="small" src="imgs/roadtohirelogo.png" alt="RoadtoHire">
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
